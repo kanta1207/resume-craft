@@ -1,8 +1,8 @@
-# ResumeForge – Full MVP Specification
+# ResumeCraft – Full MVP Specification
 
 Local-First Resume Builder & ATS Analyzer
 
-ResumeForge is a **local-first, privacy-preserving toolkit** that helps engineers generate ATS-optimized resumes using their own LLM tools, compile them locally, and analyze them via a lightweight GUI.
+ResumeCraft is a **local-first, privacy-preserving toolkit** that helps engineers generate ATS-optimized resumes using their own LLM tools, compile them locally, and analyze them via a lightweight GUI.
 
 All processing happens **on the user’s machine only**.  
 There is **no cloud**, **no external API**, and **no hosted backend**.
@@ -307,4 +307,4 @@ If PDF not found:
 
 ## 14. One-sentence Summary
 
-**ResumeForge is a fully local resume workflow where your LLM creates LaTeX, your CLI builds PDFs, and the GUI visualizes ATS metrics using a shared local analysis engine.**
+**ResumeCraft is a fully local resume workflow where your LLM creates LaTeX, your CLI builds PDFs, and the GUI visualizes ATS metrics using a shared local analysis engine.**
