@@ -202,7 +202,7 @@ Returned object is used identically in:
 
 ---
 
-## 8. HonoX GUI — Viewer + Analyzer Only
+## 8. TanStack Start GUI — Viewer + Analyzer Only
 
 The GUI is minimal and focused.
 
@@ -251,7 +251,7 @@ If PDF not found:
 
 ---
 
-## 10. HonoX APIs (Used Only by GUI)
+## 10. TanStack Start APIs (Used Only by GUI)
 
 ### `GET /api/pdf/:jd`
 
