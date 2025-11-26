@@ -26,4 +26,3 @@ export function MissingKeywords({ keywords }: MissingKeywordsProps) {
     </div>
   );
 }
-
