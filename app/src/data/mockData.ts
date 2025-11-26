@@ -117,3 +117,4 @@ export const mockAtsAnalysis: AtsAnalysis = {
   verbStrength: 8.2,
 };
 
+

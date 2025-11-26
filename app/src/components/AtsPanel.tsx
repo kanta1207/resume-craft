@@ -1,4 +1,10 @@
-import { TrendingUp, AlertCircle, CheckCircle2, Target, Zap } from 'lucide-react';
+import {
+  TrendingUp,
+  AlertCircle,
+  CheckCircle2,
+  Target,
+  Zap,
+} from 'lucide-react';
 import { KeywordMatch } from './KeywordMatch';
 import { MissingKeywords } from './MissingKeywords';
 import { Badge } from './ui/badge';
@@ -15,10 +21,14 @@ export function AtsPanel({ analysis }: AtsPanelProps) {
       <div className="flex items-center justify-between">
         <div>
           <h3 className="font-semibold text-foreground">Analysis Report</h3>
-          <p className="text-xs text-muted-foreground">ATS Optimization Score</p>
+          <p className="text-xs text-muted-foreground">
+            ATS Optimization Score
+          </p>
         </div>
         <div className="text-right">
-          <div className="text-2xl font-bold text-foreground">{analysis.overallScore}%</div>
+          <div className="text-2xl font-bold text-foreground">
+            {analysis.overallScore}%
+          </div>
           <div className="text-[10px] text-emerald-600 font-medium uppercase tracking-wide">
             Excellent
           </div>
@@ -53,8 +63,8 @@ export function AtsPanel({ analysis }: AtsPanelProps) {
           </div>
 
           <p className="text-xs text-muted-foreground leading-relaxed">
-            Your resume demonstrates strong alignment with the job requirements. Focus on adding
-            quantifiable metrics to increase impact.
+            Your resume demonstrates strong alignment with the job requirements.
+            Focus on adding quantifiable metrics to increase impact.
           </p>
         </div>
       </div>
@@ -124,7 +134,10 @@ export function AtsPanel({ analysis }: AtsPanelProps) {
               { label: 'Education', status: true },
               { label: 'Quantifiable Achievements', status: false },
             ].map((item, index) => (
-              <div key={index} className="flex items-center justify-between p-3 text-sm">
+              <div
+                key={index}
+                className="flex items-center justify-between p-3 text-sm"
+              >
                 <span className="text-muted-foreground">{item.label}</span>
                 {item.status ? (
                   <CheckCircle2 className="size-4 text-emerald-500" />
@@ -145,13 +158,16 @@ export function AtsPanel({ analysis }: AtsPanelProps) {
             <li className="flex gap-2.5 text-xs text-muted-foreground">
               <span className="text-amber-500 mt-0.5">•</span>
               <span>
-                Add more quantifiable achievements with specific metrics (e.g., "Increased revenue by
-                20%")
+                Add more quantifiable achievements with specific metrics (e.g.,
+                "Increased revenue by 20%")
               </span>
             </li>
             <li className="flex gap-2.5 text-xs text-muted-foreground">
               <span className="text-amber-500 mt-0.5">•</span>
-              <span>Include "cloud architecture" and "microservices" to match JD requirements</span>
+              <span>
+                Include "cloud architecture" and "microservices" to match JD
+                requirements
+              </span>
             </li>
           </ul>
         </div>
@@ -159,4 +175,3 @@ export function AtsPanel({ analysis }: AtsPanelProps) {
     </div>
   );
 }
-
