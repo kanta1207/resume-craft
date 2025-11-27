@@ -1,9 +1,6 @@
 pre-commit:
-  parallel: true
+  parallel: false
   commands:
-    format:
-      run: cd app && bunx biome format --write .
+    biome:
+      run: cd app && bunx biome check --write .
       stage_fixed: true
-    lint:
-      run: cd app && bun run lint
-      fail_text: 'Linting failed. Please fix the errors above before committing.'
