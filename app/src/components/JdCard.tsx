@@ -11,10 +11,7 @@ interface JdCardProps {
 	onOpenDetail?: () => void;
 }
 
-export function JdCard({
-	job,
-	viewMode,
-}: JdCardProps) {
+export function JdCard({ job, viewMode }: JdCardProps) {
 	const hasResume = job.hasResume;
 
 	if (viewMode === "list") {
