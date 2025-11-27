@@ -19,9 +19,9 @@ describe('JdCard', () => {
     expect(screen.getByText(job.title)).toBeTruthy();
     expect(screen.getByText(job.company)).toBeTruthy();
     expect(screen.getByText(job.location)).toBeTruthy();
-    
+
     if (job.hasResume) {
-        expect(screen.getByText('View Resume')).toBeTruthy();
+      expect(screen.getByText('View Resume')).toBeTruthy();
     }
   });
 
@@ -35,7 +35,7 @@ describe('JdCard', () => {
   });
 
   it('renders "No Resume" button when resume is missing', () => {
-    const job = mockJobDescriptions.find(j => !j.hasResume);
+    const job = mockJobDescriptions.find((j) => !j.hasResume);
     if (!job) throw new Error('No job without resume found in mock data');
 
     render(<JdCard job={job} viewMode="grid" />);
