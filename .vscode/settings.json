@@ -1,0 +1,8 @@
+{
+  "biome.lsp.bin": "./app/node_modules/.bin/biome",
+  "biome.projectRoot": "./app",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "always"
+  }
+}
