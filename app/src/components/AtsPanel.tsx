@@ -133,9 +133,9 @@ export function AtsPanel({ analysis }: AtsPanelProps) {
 							{ label: "Skills Section", status: true },
 							{ label: "Education", status: true },
 							{ label: "Quantifiable Achievements", status: false },
-						].map((item, index) => (
+						].map((item) => (
 							<div
-								key={index}
+								key={item.label}
 								className="flex items-center justify-between p-3 text-sm"
 							>
 								<span className="text-muted-foreground">{item.label}</span>

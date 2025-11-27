@@ -14,8 +14,6 @@ interface JdCardProps {
 export function JdCard({
 	job,
 	viewMode,
-	onOpenPreview,
-	onOpenDetail,
 }: JdCardProps) {
 	const hasResume = job.hasResume;
 

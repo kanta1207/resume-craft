@@ -9,9 +9,9 @@ export function MissingKeywords({ keywords }: MissingKeywordsProps) {
 	return (
 		<div className="space-y-3">
 			<div className="flex flex-wrap gap-2">
-				{keywords.map((keyword, index) => (
+				{keywords.map((keyword) => (
 					<Badge
-						key={index}
+						key={keyword}
 						variant="outline"
 						className="border-amber-500/20 bg-amber-500/5 text-amber-700 dark:text-amber-400 hover:bg-amber-500/10 transition-colors font-normal"
 					>

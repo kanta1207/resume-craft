@@ -65,6 +65,7 @@ function JdListScreen() {
 
 							<div className="flex bg-muted/50 p-0.5 rounded-lg border border-border/40">
 								<button
+									type="button"
 									onClick={() => setViewMode("grid")}
 									className={`p-1.5 rounded-md transition-all duration-200 ${
 										viewMode === "grid"
@@ -75,6 +76,7 @@ function JdListScreen() {
 									<LayoutGrid className="size-4" />
 								</button>
 								<button
+									type="button"
 									onClick={() => setViewMode("list")}
 									className={`p-1.5 rounded-md transition-all duration-200 ${
 										viewMode === "list"

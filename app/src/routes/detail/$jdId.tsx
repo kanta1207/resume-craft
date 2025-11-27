@@ -123,9 +123,9 @@ function JdDetailScreen() {
 							</div>
 
 							<div className="flex flex-wrap gap-2">
-								{job.tags.map((tag, index) => (
+								{job.tags.map((tag) => (
 									<Badge
-										key={index}
+										key={tag}
 										variant="secondary"
 										className="px-2.5 py-1 text-xs font-medium bg-muted/50 hover:bg-muted text-muted-foreground border-transparent"
 									>
@@ -168,9 +168,9 @@ function JdDetailScreen() {
 										"Mentor junior engineers and contribute to technical documentation",
 										"Participate in code reviews and maintain high code quality standards",
 										"Drive technical decisions and architecture improvements",
-									].map((item, i) => (
+									].map((item) => (
 										<li
-											key={i}
+											key={item}
 											className="flex gap-3 text-sm text-muted-foreground"
 										>
 											<div className="mt-1.5 size-1.5 rounded-full bg-primary flex-shrink-0" />
@@ -192,9 +192,9 @@ function JdDetailScreen() {
 										"Deep understanding of web performance optimization techniques",
 										"Experience with testing frameworks (Jest, React Testing Library)",
 										"Strong communication skills and ability to work in a team environment",
-									].map((item, i) => (
+									].map((item) => (
 										<li
-											key={i}
+											key={item}
 											className="flex gap-3 text-sm text-muted-foreground"
 										>
 											<div className="mt-1.5 size-1.5 rounded-full bg-primary flex-shrink-0" />
@@ -271,9 +271,9 @@ function JdDetailScreen() {
 										"CI/CD pipelines",
 										"Design systems",
 										"Open source contributions",
-									].map((item, i) => (
+									].map((item) => (
 										<li
-											key={i}
+											key={item}
 											className="flex gap-2 text-sm text-muted-foreground"
 										>
 											<span className="text-primary flex-shrink-0">+</span>

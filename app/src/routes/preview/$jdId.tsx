@@ -66,6 +66,7 @@ function ResumePreviewScreen() {
 					<div className="h-4 w-px bg-border/50" />
 
 					<button
+						type="button"
 						onClick={handleOpenJdDetail}
 						className="flex items-center gap-2 text-sm group/title hover:bg-muted/50 px-2 py-1 rounded transition-colors text-left"
 					>

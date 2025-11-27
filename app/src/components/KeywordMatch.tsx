@@ -1,4 +1,7 @@
+import { useId } from "react";
+
 export function KeywordMatch({ percentage }: { percentage: number }) {
+	const gradientId = useId();
 	// Calculate the circumference for a circle with radius 40
 	const radius = 40;
 	const circumference = 2 * Math.PI * radius;
@@ -9,6 +12,7 @@ export function KeywordMatch({ percentage }: { percentage: number }) {
 			<div className="relative size-28">
 				{/* Background circle */}
 				<svg className="size-full -rotate-90" viewBox="0 0 100 100">
+					<title>Keyword Match Score</title>
 					<circle
 						cx="50"
 						cy="50"
@@ -23,7 +27,7 @@ export function KeywordMatch({ percentage }: { percentage: number }) {
 						cx="50"
 						cy="50"
 						r={radius}
-						stroke="url(#gradient)"
+						stroke={`url(#${gradientId})`}
 						strokeWidth="6"
 						fill="none"
 						strokeLinecap="round"
@@ -32,7 +36,7 @@ export function KeywordMatch({ percentage }: { percentage: number }) {
 						className="transition-all duration-1000 ease-out"
 					/>
 					<defs>
-						<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+						<linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
 							<stop offset="0%" stopColor="var(--color-primary)" />
 							<stop offset="100%" stopColor="#6366f1" />
 						</linearGradient>
