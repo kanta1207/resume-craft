@@ -1,0 +1,17 @@
+{
+	"name": "resume-craft-monorepo",
+	"private": true,
+	"workspaces": [
+		"app",
+		"analysis"
+	],
+	"scripts": {
+		"test": "bun test",
+		"lint": "biome lint",
+		"check": "biome check",
+		"format": "biome format"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.8"
+	}
+}
