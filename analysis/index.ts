@@ -20,8 +20,9 @@ export function analyzeResume(
 	// Simple regex to find headers like "# Experience" or "## Experience"
 	// OR LaTeX sections like "\section{Experience}" or "\section*{Experience}"
 	const sectionsPresent = requiredSections.filter((s) => {
-		const mdRegex = new RegExp(`^#+\\s*${s}`, "mi");
-		const texRegex = new RegExp(`\\\\section\\*?\\{${s}\\}`, "mi");
+		const escapedSection = s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+		const mdRegex = new RegExp(`^#+\\s*${escapedSection}`, "mi");
+		const texRegex = new RegExp(`\\\\section\\*?\\{${escapedSection}\\}`, "mi");
 		return mdRegex.test(resumeContent) || texRegex.test(resumeContent);
 	});
 	const missingSections = requiredSections.filter(
@@ -45,10 +46,13 @@ export function analyzeResume(
 }
 
 function extractKeywords(content: string): string[] {
-	// Look for "## Keywords" section and take the line following it
-	const match = content.match(/## Keywords\n(.+)/);
+	// Look for "## Keywords" section and capture content until next header or end of file
+	const match = content.match(/## Keywords\n([\s\S]+?)(?=\n#|$)/);
 	if (match && match[1]) {
-		return match[1].split(",").map((s) => s.trim());
+		return match[1]
+			.split(",")
+			.map((s) => s.trim())
+			.filter((s) => s.length > 0);
 	}
 	return [];
 }

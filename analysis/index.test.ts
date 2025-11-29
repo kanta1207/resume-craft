@@ -59,4 +59,24 @@ I use react, typescript, and node.js.
 		const result = analyzeResume(mockResume, mockJd);
 		expect(result.missingKeywords).toHaveLength(0);
 	});
+
+	it("should extract keywords spanning multiple lines", () => {
+		const multiLineJd = `
+# Job
+## Keywords
+React, 
+TypeScript,
+Node.js
+`;
+		const mockResume = `
+\\section{Experience}
+I use React, TypeScript, and Node.js.
+\\section{Education}
+\\section{Skills}
+\\section{Projects}
+`;
+		const result = analyzeResume(mockResume, multiLineJd);
+		expect(result.keywordMatches).toHaveLength(3);
+		expect(result.missingKeywords).toHaveLength(0);
+	});
 });
