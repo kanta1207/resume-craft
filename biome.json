@@ -1,5 +1,4 @@
 {
-	"root": false,
 	"$schema": "https://biomejs.dev/schemas/2.3.8/schema.json",
 	"vcs": {
 		"enabled": false,
@@ -8,14 +7,12 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"includes": [
-			"**/src/**/*",
-			"**/.vscode/**/*",
-			"**/index.html",
-			"**/vite.config.js",
-			"!**/src/routeTree.gen.ts",
-			"!**/src/styles.css"
-		]
+		"includes": ["**/*"]
+	},
+	"css": {
+		"parser": {
+			"cssModules": true
+		}
 	},
 	"formatter": {
 		"enabled": true,
