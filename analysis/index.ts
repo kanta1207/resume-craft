@@ -1,5 +1,8 @@
 import type { AtsAnalysis } from "./types";
 
+export * from "./fs-adapter";
+export * from "./types";
+
 export function analyzeResume(
 	resumeContent: string,
 	jdContent: string,

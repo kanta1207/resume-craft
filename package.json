@@ -3,7 +3,8 @@
 	"private": true,
 	"workspaces": [
 		"app",
-		"analysis"
+		"analysis",
+		"cli"
 	],
 	"scripts": {
 		"test": "bun test",
