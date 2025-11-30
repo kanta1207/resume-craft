@@ -1,0 +1,20 @@
+{
+	"name": "@resume-craft/cli",
+	"version": "0.0.1",
+	"type": "module",
+	"bin": {
+		"resumecraft": "./src/index.ts"
+	},
+	"scripts": {
+		"dev": "bun run src/index.ts",
+		"lint": "biome check ."
+	},
+	"dependencies": {
+		"cac": "^6.7.14",
+		"@resume-craft/analysis": "workspace:*"
+	},
+	"devDependencies": {
+		"@types/node": "^20.0.0",
+		"typescript": "^5.0.0"
+	}
+}
